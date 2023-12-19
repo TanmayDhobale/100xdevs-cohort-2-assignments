@@ -1,0 +1,4 @@
+const numbs= (array) => {
+  array
+  
+}

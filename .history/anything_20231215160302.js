@@ -1,0 +1,4 @@
+const function (numbs , transfn) {
+     
+    
+}

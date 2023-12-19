@@ -1,0 +1,3 @@
+cont numbs= (array) => {
+
+}

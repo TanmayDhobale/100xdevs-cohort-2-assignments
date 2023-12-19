@@ -1,0 +1,3 @@
+let function =(nums , transformation){
+
+}
