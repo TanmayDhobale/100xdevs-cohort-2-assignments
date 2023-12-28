@@ -1,41 +1,18 @@
-const express = require("express");
-const zod = require("zod") 
-const app = express();
+var findMedianSortedArrays = function(nums1, nums2) {
+    let allnum = nums1.concat(nums2);
+  let totalnum = (allnum.length);
 
-app.use(express.json());
-
-const Schema = zod.array(zod.number()) 
-const Schema2 = zod.object({
-  email: zod.string(),
-  password: zod.string(),
-  country: (zod.literal("us")),
-
-}) 
-app.post("/health-checkup", function (req, res) {
-  const kidneys = req.body.kidneys;
-
-  const response = Schema.safeParse(kidneys)
-  const response1 = Schema2.safeParse({ email: req.body.email, password: req.body.password, country: req.body.country}); 
-  res.send({
-    response:response ,
-    response1: response1
-  });
+if (totalnum % 2 === 0) {
+  let todivide = (totalnum/2)
+    let a =  allnum[todivide]
+     let b =  allnum[todivide-1]++;
+   
+  let ans = (a + b)/2;
+  return ans
+}else{ 
   
-  // if (username != "tanmay" || password != "pass") {
-  //   res.status(400).json({"msg": "Somethings up with your username or password"})
-  //   return
-  // }
-
-  // if (kidneyId != 1 && kidneyId != 2) {
-  //   res.status(400).json({"msg": "Somethings up with your ionputs"})
-  //   return
-  // }
-  // // do something with kidney here
-  // res.json({
-  //   msg: "Your kidney is fine!"
-  // })
+}
 
   
-});
-
-app.listen(4000)
+};
+console.log(findMedianSortedArrays([1,1,3,5],[4,5,7,8]));
